@@ -1,0 +1,4 @@
+websocket-client>=1.6
+requests>=2.31
+rich>=13.0
+tldextract>=5.0

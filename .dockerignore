@@ -1,0 +1,7 @@
+.git
+.github
+tests
+examples
+rules
+__pycache__
+*.jsonl

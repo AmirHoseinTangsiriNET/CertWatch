@@ -1,0 +1,16 @@
+# Sample input for:  certwatch -t examplebank.com --from-file examples/sample_domains.txt
+examplebank.com
+www.examplebank.com
+examplebank-secure-login.xyz
+login.examplebank.verify-account.top
+examplebnak.com
+exampleb4nk.net
+examp1ebank.com
+examplebank.co.uk
+example-bank-support.click
+xn--xamplebank-jsi.com
+www.google.com
+github.com
+kdj39fkq0xz81mvpwq7.example-bank.icu
+mail.wikipedia.org
+paypal.com

@@ -1,0 +1,35 @@
+```
+CertWatch - Splunk searches. Events arrive via HEC with sourcetype "certwatch:finding".
+If fields are not auto-extracted, add to props.conf:
+    [certwatch:finding]
+    KV_MODE = json
+```
+
+```
+1) ALERT (run every 5 min, trigger if results > 0): new HIGH / CRITICAL impersonation domains
+```
+index=security sourcetype="certwatch:finding" severity IN ("HIGH","CRITICAL") earliest=-5m
+| stats latest(_time) as last_seen max(score) as score
+        values(reasons{}) as reasons values(ips{}) as ips values(issuer) as issuer
+        by domain target
+| sort - score
+
+```
+2) HUNT: impersonation domains that already resolve in DNS (most likely live phishing infrastructure)
+```
+index=security sourcetype="certwatch:finding" resolved=true earliest=-24h
+| stats max(score) as score values(ips{}) as ips by domain target
+| sort - score
+
+```
+3) REPORT: daily summary by brand and severity
+```
+index=security sourcetype="certwatch:finding" earliest=-24h@h
+| timechart span=1h count by severity
+
+```
+4) HUNT: which CAs are issuing certificates for look-alike domains
+```
+index=security sourcetype="certwatch:finding" earliest=-30d
+| stats count dc(domain) as unique_domains by issuer
+| sort - count
