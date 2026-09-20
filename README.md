@@ -4,7 +4,7 @@
 
 **Real-time Certificate Transparency monitor that catches phishing and brand-impersonation domains — the moment their TLS certificate is issued.**
 
-[![CI](https://github.com/YOUR_GITHUB_USERNAME/certwatch/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/certwatch/actions)
+[![CI](https://github.com/AmirHoseinTangsiriNET/certwatch/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/certwatch/actions)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Blue Team](https://img.shields.io/badge/made%20for-Blue%20Team%20%2F%20SOC-1f6feb)
