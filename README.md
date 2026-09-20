@@ -58,7 +58,7 @@ flowchart LR
 ## 🚀 Quick start
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/certwatch.git
+git clone https://github.com/AmirHoseinTangsiriNET/certwatch.git
 cd certwatch
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install .
